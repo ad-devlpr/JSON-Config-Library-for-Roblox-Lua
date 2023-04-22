@@ -1,10 +1,10 @@
 # Documentation:
 
 ⋅⋅* void WriteConfig(fileName, content)
-Writes a JSON config file with the given filename and content.
+Writes a JSON config file with the given filename and content which can be read & overwritten.
 
 ⋅⋅* void ReadConfig(fileName)
-Returns a table from the read config which you can use.
+Returns a table from the read config file which you can use as mentioned/given in the example.
 
 ⋅⋅* bool IsConfig(fileName)
-Returns true if the config exists in workspace folder, false if not.
+Returns true if the config exists in the executor's directory, workspace folder (by default) or wherever you've saved it, false if not.
