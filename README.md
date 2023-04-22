@@ -63,16 +63,12 @@ IsConfig()
 
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AlexDevlpr/JSON-Config-Library-for-Roblox-Lua/main/Library.lua"))()
 
-local table_uwu = lib.ReadConfig("example_config")
+local configexists = lib.IsConfig("example_config")
 
-print("I have $"..tostring(table_uwu.money))
-print("I am broke? That is "..tostring(table_uwu.isbroke))
-print(table_uwu.msg)
+print(configexists)
 
 --[[
 Output:
-I have $20
-I am broke? That is true
-This is a example script lol
+true
 ]]
 </pre>
