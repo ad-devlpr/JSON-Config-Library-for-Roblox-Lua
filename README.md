@@ -4,17 +4,17 @@ This makes writing config files way easier than before. Uses HttpService:JSONEnc
 # Documentation:
 ---
 
-void WriteConfig(fileName, content)
+void WriteConfig(<string> fileName, <table> content)
 ---
-Writes a JSON config file with the given filename and content.
+Writes a JSON config file with the given filename and content which can be read, edited or overwritten.
 
-void ReadConfig(fileName)
+void ReadConfig(<string> fileName/filePath)
 ---
-Returns a table from the read config which you can use.
+Returns a table from the read config file which you can use as mentioned/given in the example.
 
-bool IsConfig(fileName)
+bool IsConfig(<string> fileName/filePath)
 ---
-Returns true if the config exists in workspace folder, false if not.
+Returns true if the config exists in the executor's directory, workspace folder (by default) or wherever you've saved it, false if not.
 # Examples:
 WriteConfig()
 ---
