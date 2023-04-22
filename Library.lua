@@ -1,10 +1,9 @@
+-- Pre-Init
 local lib = {}
 
-local hs = game:GetService("HttpService")
-
+-- Functions
 function lib.WriteConfig(fname, data)
-    local file = fname..".json"
-    writefile(file, hs:JSONEncode(data))
+    writefile(fname..".json", game:GetService("HttpService"):JSONEncode(data))
 end
 
 function lib.IsConfig(fname)
@@ -12,10 +11,8 @@ function lib.IsConfig(fname)
 end
 
 function lib.ReadConfig(fname)
-    local file = fname..".json"
-    local raw_data = readfile(file)
-    local data = hs:JSONDecode(raw_data)
-    return data
+    return game:GetService("HttpService"):JSONDecode(readfile(fname..".json"))
 end
 
+-- Returns library of functions.
 return lib
